@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorgeous-Ghost - colortab Release</title>
+    <style>
+        :root { --primary: #8b0000; --secondary: #4b0082; --accent: #ff6b6b; --gold: #ffd700; --dark: #1a1a2e; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(135deg, var(--dark) 0%, #16213e 100%); color: #e6e6e6; line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; padding: 60px 20px; background: rgba(0, 0, 0, 0.6); border-radius: 15px; margin-bottom: 40px; border: 1px solid var(--gold); position: relative; overflow: hidden; }
+        h1 { font-size: 3.5em; color: var(--accent); text-shadow: 0 0 20px rgba(255, 107, 107, 0.5); margin-bottom: 20px; }
+        .subtitle { font-size: 1.5em; color: var(--gold); margin-bottom: 30px; }
+        
+        /* 图片轮播样式 */
+        .image-carousel {
+            width: 100%;
+            max-width: 800px;
+            height: 300px;
+            margin: 30px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid var(--gold);
+            position: relative;
+        }
+        .carousel-track {
+            display: flex;
+            width: calc(800px * 7);
+            height: 100%;
+            animation: scroll 160s linear infinite;
+        }
+        .carousel-track img {
+            width: 800px;
+            height: 300px;
+            object-fit: cover;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-800px * 6)); }
+        }
+
+        .section { background: rgba(255, 255, 255, 0.08); padding: 40px; margin: 30px 0; border-radius: 15px; border-left: 5px solid var(--accent); }
+        h2 { color: var(--gold); margin-bottom: 20px; font-size: 2em; }
+        h3 { color: var(--accent); margin: 20px 0 10px 0; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
+        .feature-card { background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border: 1px solid rgba(255, 215, 0, 0.3); transition: transform 0.3s ease; }
+        .feature-card:hover { transform: translateY(-5px); }
+        .publisher-info { background: rgba(139, 0, 0, 0.2); padding: 30px; border-radius: 10px; text-align: center; margin: 40px 0; border: 1px solid var(--primary); }
+        .contact { text-align: center; padding: 40px; background: rgba(0, 0, 0, 0.5); border-radius: 10px; }
+        .btn { display: inline-block; background: linear-gradient(45deg, var(--accent), #ff8e8e); color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold; margin: 10px; transition: transform 0.3s ease; }
+        .btn:hover { transform: translateY(-3px); }
+        footer { text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #444; }
+        .meta-requirements { background: rgba(0, 50, 100, 0.2); padding: 25px; border-radius: 10px; margin: 20px 0; }
+        @media (max-width: 768px) { 
+            h1 { font-size: 2.5em; } 
+            .subtitle { font-size: 1.2em; } 
+            .section { padding: 20px; } 
+            .features-grid { grid-template-columns: 1fr; }
+            .image-carousel, .carousel-track img {
+                height: 200px;
+            }
+            .carousel-track {
+                width: calc(100% * 7);
+                animation: scroll 160s linear infinite;
+            }
+            @keyframes scroll {
+                100% { transform: translateX(calc(-100% * 6)); }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕯️ Gorgeous Ghost VR: Nie Xiaoqian 🕯️</h1>
+            <div class="subtitle">Immersive VR Experience · A Tribute to Hong Kong Film Classics</div>
+            
+            <!-- 图片轮播区域 -->
+            <div class="image-carousel">
+                <div class="carousel-track">
+                    <img src="./images/pic1.jpg" alt="Lanruo Temple Scene 1">
+                    <img src="./images/pic2.jpg" alt="Nie Xiaoqian Character Design">
+                    <img src="./images/pic3.jpg" alt="Wilderness Night View">
+                    <img src="./images/pic4.jpg" alt="Yan Chixia Action Scene">
+                    <img src="./images/pic5.jpg" alt="Boudoir Interior">
+                    <img src="./images/pic6.jpg" alt="Ghostly Encounter Moment">
+                    <img src="./images/pic1.jpg" alt="Lanruo Temple Scene 1">
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <h2>🎬 Story Introduction</h2>
+            <p>Step into an 86-minute complete narrative experience and witness the poignant legend of the female ghost Nie Xiaoqian in the fantasy world of "Strange Tales from a Chinese Studio". This work is adapted from the classic "A Chinese Ghost Story" and pays a heartfelt tribute to the golden age of Hong Kong cinema in 1987.</p>
+            <h3>Core Plot</h3>
+            <p>As a scholar who strays into Lanruo Temple, you will encounter the stunning female ghost Nie Xiaoqian. With the conspiracy of the tree demon Granny and the help of the warrior Yan Chixia, you will write a love story between human and ghost that transcends life and death. Your choices will directly affect the development of the story.</p>
+        </section>
+
+        <section class="section">
+            <h2>🌟 Core Features</h2>
+            <div class="features-grid">
+                <div class="feature-card"><h3>🎭 Immersive Large-Space Experience</h3><p>A realistic ancient-style world created with VR technology, allowing free movement in scenes such as Lanruo Temple, wilderness, and boudoir, providing an unprecedented sense of presence.</p></div>
+                <div class="feature-card"><h3>⏱️ Intelligent Segmented Playback</h3><p>The 86-minute epic narrative is carefully divided into multiple chapters, allowing safe exit at any time and resuming from where you left off next time, perfectly balancing experience and comfort.</p></div>
+                <div class="feature-card"><h3>🎥 Cinema-Grade Audio-Visual</h3><p>High-quality 3D modeling and spatial audio technology recreate the classic atmosphere of Hong Kong films, with the ghost's飘忽 movements and the sound of swords ringing as if in your ears.</p></div>
+                <div class="feature-card"><h3>📖 Interactive Narrative</h3><p>First-person perspective drives the plot development, including key choices and environmental interactions, allowing you to truly "live" in the story.</p></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🕒 Experience Details</h2>
+            <ul>
+                <li><strong>Total Duration:</strong> 86-minute complete narrative experience</li>
+                <li><strong>Segmented Design:</strong> Supports saving and exiting at any time, with automatic resumption</li>
+                <li><strong>Comfort Optimization:</strong> Optimized for VR device characteristics to reduce dizziness</li>
+                <li><strong>Device Compatibility:</strong> Perfectly compatible with Meta Quest series devices</li>
+                <li><strong>Experience Type:</strong> Immersive interactive film</li>
+            </ul>
+        </section>
+
+        <div class="publisher-info">
+            <h2>🏢 Publisher Information</h2>
+            <h3>colortab</h3>
+            <p><strong>Developer:</strong> zhang yi</p>
+            <p><strong>Organization ID:</strong> 774720639063125</p>
+            <p><strong>Meta Horizon Account:</strong> @colortab</p>
+            <p><strong>Type:</strong> Independent VR content development studio</p>
+            <p>Focused on innovative development of immersive VR narrative experiences</p>
+        </div>
+
+        <section class="section meta-requirements">
+            <h2>📋 Meta Quest Submission Information</h2>
+            <p>This page is for links related to Meta Quest app submission:</p>
+            <ul>
+                <li><strong>Website Link:</strong> This page's URL</li>
+                <li><strong>Support Link:</strong> This page's URL</li>
+                <li><strong>Privacy Policy:</strong> Need to create privacy.html separately</li>
+                <li><strong>Terms of Service:</strong> Need to create terms.html separately</li>
+            </ul>
+        </section>
+
+        <section class="contact">
+            <h2>📞 Contact Us</h2>
+            <p>If you have any questions or feedback, please contact us through the following method:</p>
+            <p><strong>Email:</strong> 331340349@qq.com</p>
+            <a href="mailto:331340349@qq.com" class="btn">Send Email</a>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 colortab. All rights reserved.</p>
+            <p>"Gorgeous-Ghost" is a work paying tribute to classics, and the copyright of related original works belongs to the original authors.</p>
+        </footer>
+    </div>
+</body>
+</html>
